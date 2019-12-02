@@ -1,0 +1,67 @@
+@import "main.scss";
+@import "mixins";
+@import "colorThemeRed";
+// @import "colorThemeBlue";
+
+.jp_content {
+    font-family: $primaryFont;
+    margin: 0 auto;
+}
+
+section {
+    margin: 40px 0px 70px;
+}
+
+.button {
+    border-radius: $borderRadius;
+    font-family: $primaryFont;
+}
+.jp_button-base {
+    @include button-general;
+    background: $colorBase;
+}
+.jp_button-important {
+    @include button-general;
+    background: $colorImportant;
+}
+.jp_button-warning {
+    @include button-general;
+    background: $colorWarning;
+}
+
+.jp_primaryFont {
+    font-family: $primaryFont;
+    font-size: 2rem;
+    padding: 10px 0;
+}
+.jp_secondaryFont {
+    font-family: $secondaryFont;
+    font-size: 2rem;
+    padding: 10px 0;
+}
+
+.jp_shadowBox {
+    @include button-general;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: $shadowBox;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    font-size: 2rem;
+    height: 200px;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &:hover {
+        color: #ffffff;
+    }
+    @media screen and (max-width: 470px){
+        display: flex;
+        height: 100px;
+        padding: 0;
+        width: 100%;
+    }
+}

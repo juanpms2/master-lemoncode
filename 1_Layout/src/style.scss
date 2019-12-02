@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;;
+}
+
+.jp_container {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 10% auto 20%;
+    grid-template-areas: "myHeader myHeader myHeader myHeader myHeader"
+                         "mySection mySection mySection mySection mySection"
+                         "myAside myAside myAside myAside myAside";
+    height: 100vh;
+
+    
+    
+    .jp_navMenu {
+        display: flex;
+        background-color: yellow;
+        grid-area: myHeader;
+        align-items: center;
+        
+        .jp_navMenu-item {
+            width: 33%;
+            text-align: center;
+            
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .jp_content {
+        background-color: yellowgreen;
+        grid-area: mySection;
+        display: block;
+    }
+    
+    .jp_aside {
+        background-color: red;
+        grid-area: myAside;
+        display: block;
+    }
+    
+    @media screen and (min-width: 470px) {
+        grid-template-areas: "myHeader mySection mySection mySection mySection"
+                                "myHeader mySection mySection mySection mySection"
+                                "myHeader myAside myAside myAside myAside";
+        
+        .jp_navMenu{
+            flex-flow: wrap;
+
+            .jp_navMenu-item {
+                width: 100%;
+                text-align: left;
+                padding-left: 2%;
+            }
+        }
+    }
+}

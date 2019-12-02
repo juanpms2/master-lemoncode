@@ -1,0 +1,164 @@
+@import "main.scss";
+@import "funtions";
+@import "mixins";
+
+
+.jp_content-gradient-red {
+    @include contenedor-gradiente;
+    
+    h3 {
+        @include formato-h3-title;
+    }
+
+    :nth-child(2) {
+        grid-area: darken4;
+        background-color: generateColor(red, 25%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(3) {
+        grid-area: darken3;
+        background-color: generateColor(red, 20%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(4) {
+        grid-area: darken2;
+        background-color: generateColor(red, 15%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(5) {
+        grid-area: darken1;
+        background-color: generateColor(red, 10%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(6) {
+        grid-area: baseColor;
+        background-color: red;
+        @include formato-cuadrado;
+    }
+    :nth-child(7) {
+        grid-area: lighten1;
+        background-color: generateColor(red, 10%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(8) {
+        grid-area: lighten2;
+        background-color: generateColor(red, 20%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(9) {
+        grid-area: lighten3;
+        background-color: generateColor(red, 30%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(10) {
+        grid-area: lighten4;
+        background-color: generateColor(red, 40%, "aclara");
+        @include formato-cuadrado;
+    }
+}
+.jp_content-gradient-green {
+    @include contenedor-gradiente;
+    
+    h3 {
+        @include formato-h3-title;
+    }
+
+    :nth-child(2) {
+        grid-area: darken4;
+        background-color: generateColor(green, 25%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(3) {
+        grid-area: darken3;
+        background-color: generateColor(green, 20%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(4) {
+        grid-area: darken2;
+        background-color: generateColor(green, 15%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(5) {
+        grid-area: darken1;
+        background-color: generateColor(green, 10%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(6) {
+        grid-area: baseColor;
+        background-color: green;
+        @include formato-cuadrado;
+    }
+    :nth-child(7) {
+        grid-area: lighten1;
+        background-color: generateColor(green, 10%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(8) {
+        grid-area: lighten2;
+        background-color: generateColor(green, 20%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(9) {
+        grid-area: lighten3;
+        background-color: generateColor(green, 30%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(10) {
+        grid-area: lighten4;
+        background-color: generateColor(green, 40%, "aclara");
+        @include formato-cuadrado;
+    }
+}
+.jp_content-gradient-purple {
+    @include contenedor-gradiente;
+    
+    h3 {
+        @include formato-h3-title;
+    }
+
+    :nth-child(2) {
+        grid-area: darken4;
+        background-color: generateColor(purple, 25%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(3) {
+        grid-area: darken3;
+        background-color: generateColor(purple, 20%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(4) {
+        grid-area: darken2;
+        background-color: generateColor(purple, 15%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(5) {
+        grid-area: darken1;
+        background-color: generateColor(purple, 10%, "oscurece");
+        @include formato-cuadrado;
+    }
+    :nth-child(6) {
+        grid-area: baseColor;
+        background-color: purple;
+        @include formato-cuadrado;
+    }
+    :nth-child(7) {
+        grid-area: lighten1;
+        background-color: generateColor(purple, 10%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(8) {
+        grid-area: lighten2;
+        background-color: generateColor(purple, 20%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(9) {
+        grid-area: lighten3;
+        background-color: generateColor(purple, 30%, "aclara");
+        @include formato-cuadrado;
+    }
+    :nth-child(10) {
+        grid-area: lighten4;
+        background-color: generateColor(purple, 40%, "aclara");
+        @include formato-cuadrado;
+    }
+}

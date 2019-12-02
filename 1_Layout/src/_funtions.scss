@@ -1,0 +1,11 @@
+@function generateColor($color, $amount, $tipo) {
+    $colorFinal: "";
+    @if $tipo == "aclara" {
+        $colorFinal: lighten($color, $amount);
+    }
+    @if $tipo == "oscurece" {
+        $colorFinal: darken($color, $amount);
+    }
+
+    @return $colorFinal;
+}

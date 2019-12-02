@@ -1,0 +1,142 @@
+@import "mixins";
+@import "colorThemeBlue";
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;;
+}
+.jp_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px auto 50px;
+    grid-template-areas: "myheader myheader myheader myheader"
+                         "main main main main"
+                         "footer footer footer footer";
+    min-height: 100vh;
+}
+header {
+    background: rgb(1, 24, 0);
+    grid-area: myheader;
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 3rem;
+        color: #B7CA00;
+        width: 90%;
+        margin: 0 auto;
+    }
+    h6 {
+        text-align: right;
+        color: #F4DE00;
+        padding: 0 1rem 1rem 0;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 723px){
+        
+        h1 {
+            font-size: 2rem;
+        }
+
+        h6 {
+            font-size: 0.7rem;
+        }
+    }
+
+}
+
+.jp_content {
+    grid-area: main;
+    align-items: center;
+    max-width: 100%;
+    position: relative;
+
+    .jp_navMenu{
+        display: flex;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;        
+        
+        .jp_navMenu-item {
+            @include button-general;
+            background: $colorImportant;
+            border-radius: $borderRadius;
+            font-family: $primaryFont;
+            font-weight: lighter;
+            max-width: 20%;
+            padding: 5px;            
+            
+            a {
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                font-size: 0.7rem;
+            }
+        }
+    }
+    @media screen and (min-width: 421px){
+        position: static;
+        
+        .jp_navMenu {
+            position: static;
+            justify-content: space-around;
+            margin-top: 5px;
+
+            .jp_navMenu-item {
+                width: 150px;
+                
+                a {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+.jp_footer {
+    align-items: center;
+    background: rgb(1, 24, 0);
+    color: #B7CA00;
+    display: grid;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    grid-area: footer;
+    grid-template-areas: "modulo logo alumno";
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 50px;
+    text-align: center;
+
+    .modulo {
+        grid-area: modulo;
+    }
+    .nombre {
+        grid-area: alumno;
+    }
+
+    img {
+        background-color: #fff;
+        grid-area: logo;
+        margin: 0 auto;
+        max-width: 100px;
+        padding: 0.5rem 3rem;
+    };
+
+    @media screen and (max-width: 723px){
+        .modulo {
+            font-size: 0.7rem;
+        }
+        .nombre {
+            font-size: 0.7rem;
+        }
+        img {
+            max-width: 80px;
+        }
+    }
+}
